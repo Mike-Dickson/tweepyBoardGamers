@@ -20,10 +20,13 @@ myDataset = openCursor.fetchall()
 for row in myDataset:
     print(row.FullName)
 
-Tweet = 'I like turtles'
-UserName = 'ZombieKid'
+UserName = 'Bob Donut'
+UserLocation = 'California'
+UserFriends = 341
+UserFollowers = 13013
+TweetText = 'Had a new donut today. Had gumballs and gummy worms on it. Wasnt my favorite.'
 
-sqlString = 'INSERT Tweets (Tweet, UserName) VALUES (?, ?)'
+sqlString = 'INSERT Tweets (UserName, UserLocation, UserFriends, UserFollowers, TweetText) VALUES (?, ?, ?, ?, ?)'
 args = Tweet, UserName
 
 openConnection.execute(sqlString, args)
